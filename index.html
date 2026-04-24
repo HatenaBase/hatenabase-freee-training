@@ -242,6 +242,28 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
 .s-footer-logo img{height:28px;margin:0 auto 16px;opacity:.8}
 .s-footer-copy{font-size:12px;color:rgba(255,255,255,.4)}
 
+/* ===== Testimonials ===== */
+.s-testimonial-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+.s-testimonial{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:28px;position:relative}
+.s-testimonial::before{content:'\201C';position:absolute;top:12px;left:20px;font-size:48px;color:var(--accent);opacity:.15;line-height:1;font-family:serif}
+.s-testimonial p{font-size:14px;color:var(--text);line-height:1.9;padding-left:4px}
+.s-testimonial .s-testimonial-author{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);font-weight:500}
+.s-testimonial .s-testimonial-author .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* ===== Link Card ===== */
+.s-linkcard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.s-linkcard{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .3s var(--ease);background:var(--white)}
+.s-linkcard:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(10,40,70,.1)}
+.s-linkcard img{width:100%;height:180px;object-fit:cover;border-bottom:1px solid var(--border)}
+.s-linkcard-body{padding:16px}
+.s-linkcard-body h4{font-size:13px;font-weight:600;color:var(--navy);line-height:1.6;margin-bottom:8px}
+.s-linkcard-body .s-linkcard-source{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px}
+
+/* ===== Screenshot ===== */
+.s-screenshot{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:0 4px 16px rgba(10,40,70,.06);margin-top:32px}
+.s-screenshot img{width:100%;display:block}
+.s-screenshot-caption{padding:12px 16px;background:var(--bg);font-size:13px;color:var(--sub);text-align:center;border-top:1px solid var(--border)}
+
 /* ===== Animation ===== */
 .s-fade{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .s-fade.visible{opacity:1;transform:none}
@@ -261,6 +283,7 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
   .s-flow-steps{flex-direction:column;align-items:center}
   .s-flow-arrow{transform:rotate(90deg)}
   .s-comm-grid{grid-template-columns:1fr}
+  .s-linkcard-grid{grid-template-columns:1fr}
 }
 @media(max-width:767px){
   .s-section{padding:64px 0}
@@ -268,6 +291,7 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
   .s-hero-metrics{grid-template-columns:repeat(2,1fr);gap:12px}
   .s-target-grid{grid-template-columns:1fr}
   .s-curriculum-grid{grid-template-columns:1fr}
+  .s-testimonial-grid{grid-template-columns:1fr}
   .s-instructor-card{flex-direction:column;align-items:center;text-align:center}
   .s-instructor-info .badges{justify-content:center}
   .s-pricing-amount{font-size:42px}
@@ -342,7 +366,7 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
     </div>
     <div class="s-trust-item" style="opacity:.4;font-size:13px;color:#8a8a8a">|</div>
     <div class="s-trust-item">
-      <span style="font-size:13px;font-weight:600;color:#5a5a5a;">DIGITAL BASE 認定</span>
+      <img src="images/digitalbase-logo.png" alt="DIGITAL BASE" style="height:36px"/>
     </div>
   </div>
 </div>
@@ -586,6 +610,28 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
         <span class="tag">実務応用</span>
       </div>
     </div>
+
+    <!-- E-learningカリキュラム スクリーンショット -->
+    <div class="s-screenshot s-fade" style="margin-top:40px">
+      <img src="images/pdf-page-54.png" alt="E-learningカリキュラム一覧"/>
+      <div class="s-screenshot-caption">E-learningの受講画面イメージ ― Slack上でカリキュラムを進行し、講師とリアルタイムでやり取りします</div>
+    </div>
+
+    <!-- 受講者の感想 -->
+    <div class="s-center" style="margin-top:56px">
+      <p class="s-eyebrow s-fade">Voices</p>
+      <h2 class="s-title s-fade" style="font-size:clamp(20px,3vw,28px)">受講者の<span>声</span></h2>
+    </div>
+    <div class="s-testimonial-grid">
+      <div class="s-testimonial s-fade">
+        <p>E-learningの内容がとても実践的で、実際のfreee画面を操作しながら学べるので理解が早かったです。特に「自動で経理」や「自動登録ルール」の部分は、実務で毎日使う機能なので、研修で一通り触れたことで自信を持って業務に入れました。Slackでいつでも講師に質問できる環境もありがたかったです。</p>
+        <div class="s-testimonial-author"><span class="dot"></span>30代女性 ― 経理実務経験3年・freee未経験で受講</div>
+      </div>
+      <div class="s-testimonial s-fade s-d1">
+        <p>育児で5年のブランクがありましたが、E-learningで自分のペースで学び直せたのが大きかったです。バーチャル月次決算では実際の月次決算の流れを体験でき、「トラップ」として仕込まれたミスを見つける練習が実務感覚を取り戻すのにとても役立ちました。修了後すぐにリモートスタッフとしてお仕事を紹介いただけました。</p>
+        <div class="s-testimonial-author"><span class="dot"></span>40代女性 ― 簿記2級保有・ブランク5年から復帰</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -749,6 +795,12 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
           <tr><td>34</td><td>各帳簿作成</td><td class="est">20分</td><td>賃金台帳や各種手続書類の確認</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- 経理プログラム スクリーンショット -->
+    <div class="s-screenshot s-fade" style="margin-top:40px">
+      <img src="images/pdf-page-53.png" alt="経理プログラム一覧 詳細"/>
+      <div class="s-screenshot-caption">バーチャル月次決算の経理プログラム一覧 ― 全34項目を実際のfreee環境で実践します</div>
     </div>
   </div>
 </section>
@@ -949,6 +1001,52 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
   </div>
 </section>
 
+<!-- ===== DIGITAL BASE × freee ===== -->
+<section class="s-section" style="background:var(--bg)">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Partnership</p>
+      <h2 class="s-title s-fade"><span>DIGITAL BASE</span> × freee社との取り組み</h2>
+      <p class="s-subtitle s-fade">はてなベース代表の世戸口が理事を務める一般社団法人DIGITAL BASEは、フリー株式会社と業務提携を締結。会計・税理士業界のDX推進と「freee人材」の育成に取り組んでいます。</p>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:48px" class="s-fade">
+      <img src="images/digitalbase-logo.png" alt="DIGITAL BASE" style="height:56px"/>
+      <span style="font-size:24px;color:var(--muted)">×</span>
+      <img src="images/freee-logo.png" alt="freee" style="height:32px"/>
+      <span style="font-size:24px;color:var(--muted)">×</span>
+      <img src="images/hatenabase-logo.png" alt="Hatenabase" style="height:28px"/>
+    </div>
+
+    <div class="s-linkcard-grid s-fade">
+      <!-- freee × DIGITALBASE 業務提携 -->
+      <a href="https://corp.freee.co.jp/news/20250826freee_digitalbase.html" target="_blank" class="s-linkcard">
+        <img src="images/freee-digitalbase-news.png" alt="freee × DIGITAL BASE 業務提携"/>
+        <div class="s-linkcard-body">
+          <h4>freee、一般社団法人DIGITAL BASEと業務提携を開始 ― 『速習freee会計研修』β版の参加申込受付を開始</h4>
+          <div class="s-linkcard-source"><i class="fa-solid fa-external-link-alt"></i> corp.freee.co.jp</div>
+        </div>
+      </a>
+      <!-- セミナー: 育成コストゼロ経営 -->
+      <a href="https://adv.freee.co.jp/seminar/cloud-accounting-employment" target="_blank" class="s-linkcard">
+        <img src="images/freee-seminar-employment.png" alt="クラウド会計 習得済み人材採用セミナー"/>
+        <div class="s-linkcard-body">
+          <h4>クラウド会計 習得済み人材採用で実現する「育成コストゼロ」経営セミナー</h4>
+          <div class="s-linkcard-source"><i class="fa-solid fa-external-link-alt"></i> adv.freee.co.jp</div>
+        </div>
+      </a>
+      <!-- セミナー: freee人材育成 -->
+      <a href="https://adv.freee.co.jp/seminar/digital-base" target="_blank" class="s-linkcard">
+        <img src="images/freee-seminar-digitalbase.png" alt="freee人材育成セミナー"/>
+        <div class="s-linkcard-body">
+          <h4>デジタル時代の会計業界で即戦力になる「freee人材」育成セミナー</h4>
+          <div class="s-linkcard-source"><i class="fa-solid fa-external-link-alt"></i> adv.freee.co.jp</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FAQ ===== -->
 <section class="s-section">
   <div class="s-container">
@@ -1001,7 +1099,11 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
 <!-- ===== Footer ===== -->
 <footer class="s-footer">
   <div class="s-container">
-    <div class="s-footer-logo"><img src="images/hatenabase-logo.png" alt="Hatenabase" style="filter:brightness(10)"/></div>
+    <a href="https://hatenabase.co.jp" target="_blank" class="s-footer-logo" style="display:block"><img src="images/hatenabase-logo.png" alt="Hatenabase" style="filter:brightness(10)"/></a>
+    <div style="margin:12px 0 16px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
+      <a href="https://hatenabase.co.jp" target="_blank" style="font-size:13px;color:rgba(255,255,255,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.6)'"><i class="fa-solid fa-globe" style="margin-right:4px"></i>会社HP</a>
+      <a href="https://seto0615.github.io/hatenabase-tax-lp/" target="_blank" style="font-size:13px;color:rgba(255,255,255,.6);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.6)'"><i class="fa-solid fa-building-columns" style="margin-right:4px"></i>はてなベース税理士事務所</a>
+    </div>
     <div class="s-footer-copy">&copy; 2026 Hatenabase, inc. All rights reserved.</div>
   </div>
 </footer>
