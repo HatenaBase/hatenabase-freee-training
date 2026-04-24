@@ -837,10 +837,15 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
       <h2 class="s-title s-fade">E-learningの<span>参考動画</span>はこちら</h2>
       <p class="s-subtitle s-fade">研修のイメージを掴んでいただくため、E-learningの一部をサンプルとしてご覧いただけます。</p>
     </div>
-    <div class="s-video-placeholder s-fade">
-      <i class="fa-solid fa-circle-play"></i>
-      <h3>参考動画は準備中です</h3>
-      <p>近日中にサンプル動画を公開予定です。もうしばらくお待ちください。</p>
+    <div class="s-fade" style="max-width:720px;margin:0 auto;border-radius:var(--r);overflow:hidden;box-shadow:0 8px 32px rgba(10,40,70,.1)">
+      <video controls preload="metadata" style="width:100%;display:block;background:#000" poster="">
+        <source src="images/sample-lesson.mp4" type="video/mp4"/>
+        お使いのブラウザは動画再生に対応していません。
+      </video>
+      <div style="padding:16px 20px;background:var(--white);border:1px solid var(--border);border-top:none">
+        <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px">Lesson 4-20: E-learning サンプル講義</p>
+        <p style="font-size:13px;color:var(--muted)">実際のE-learningコンテンツの一部をご覧いただけます。</p>
+      </div>
     </div>
   </div>
 </section>
