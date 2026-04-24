@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>速習freee会計研修 | Hatenabase, inc.</title>
+<meta name="description" content="freee会計の実務スキルをE-learning＋実地研修で習得。研修修了後は就労先をご紹介。受講料50,000円（税込）。はてなベース株式会社が提供する会計人材育成プログラム。"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+/* ===== Reset ===== */
+*,*::before,*::after{box-sizing:border-box}
+body,h1,h2,h3,h4,p,ul,ol,li,figure,blockquote,dl,dd{margin:0;padding:0}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+table{border-collapse:collapse;width:100%}
+
+/* ===== Tokens ===== */
+:root{
+  --navy:#0A2846;
+  --navy-90:rgba(10,40,70,0.9);
+  --navy-06:rgba(10,40,70,0.06);
+  --navy-12:rgba(10,40,70,0.12);
+  --text:#191919;
+  --sub:#5a5a5a;
+  --muted:#8a8a8a;
+  --border:#e5e5e5;
+  --bg:#f5f8fb;
+  --white:#ffffff;
+  --accent:#2864F0;
+  --accent-light:#e8f0ff;
+  --green:#1a8754;
+  --green-light:#e6f4ed;
+  --orange:#e67e22;
+  --orange-light:#fef5e7;
+  --font:"Zen Kaku Gothic New",sans-serif;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+  --r:12px;
+  --r-sm:8px;
+}
+body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ===== Layout ===== */
+.s-container{max-width:1080px;margin:0 auto;padding:0 24px}
+.s-section{padding:96px 0}
+.s-center{text-align:center}
+
+/* ===== Typography ===== */
+.s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.s-title{font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--navy);line-height:1.4;margin-bottom:20px}
+.s-title span{color:var(--accent)}
+.s-subtitle{font-size:17px;color:var(--sub);max-width:720px;margin:0 auto 48px}
+.s-section-lead{font-size:15px;color:var(--sub);max-width:800px;margin:0 auto 40px;line-height:1.9}
+
+/* ===== Header ===== */
+.s-header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s var(--ease)}
+.s-header.scrolled{box-shadow:0 1px 8px rgba(10,40,70,.08)}
+.s-header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.s-header-logo img{height:32px}
+.s-header-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;background:var(--accent);color:#fff;font-size:14px;font-weight:500;border-radius:6px;transition:all .2s var(--ease)}
+.s-header-cta:hover{background:#1b4fd0;transform:translateY(-1px)}
+
+/* ===== Hero ===== */
+.s-hero{padding:140px 0 100px;background:linear-gradient(135deg,#f0f4f8 0%,#e8eef6 50%,#f5f8fb 100%);position:relative;overflow:hidden}
+.s-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(40,100,240,.06) 0%,transparent 50%)}
+.s-hero-inner{display:flex;align-items:center;gap:64px}
+.s-hero-text{flex:1}
+.s-hero-visual{flex:0 0 380px;position:relative}
+.s-hero h1{font-size:clamp(28px,5vw,42px);font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:20px}
+.s-hero h1 em{font-style:normal;color:var(--accent)}
+.s-hero-desc{font-size:17px;color:var(--sub);line-height:1.9;margin-bottom:36px}
+.s-hero-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
+.s-hero-metric{background:var(--white);padding:20px 16px;border-radius:var(--r);text-align:center;box-shadow:0 2px 12px rgba(10,40,70,.06)}
+.s-hero-metric-num{font-size:24px;font-weight:700;color:var(--navy);line-height:1.2}
+.s-hero-metric-num small{font-size:14px;font-weight:500}
+.s-hero-metric-label{font-size:12px;color:var(--muted);margin-top:4px}
+.s-hero-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:var(--accent);color:#fff;font-size:16px;font-weight:500;border-radius:8px;transition:all .2s var(--ease);box-shadow:0 4px 16px rgba(40,100,240,.2)}
+.s-hero-btn:hover{background:#1b4fd0;transform:translateY(-2px);box-shadow:0 6px 24px rgba(40,100,240,.3)}
+.s-hero-badge{position:absolute;top:20px;right:-10px;background:var(--orange);color:#fff;font-size:13px;font-weight:700;padding:8px 20px;border-radius:20px;transform:rotate(3deg);box-shadow:0 4px 12px rgba(230,126,34,.3)}
+
+/* ===== Trust ===== */
+.s-trust{padding:40px 0;border-bottom:1px solid var(--border)}
+.s-trust-inner{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.s-trust-item{display:flex;align-items:center;gap:8px;opacity:.7}
+.s-trust-item img{height:28px}
+.s-trust-item svg{height:28px}
+.s-trust-label{font-size:12px;color:var(--muted);font-weight:500}
+
+/* ===== Feature Cards ===== */
+.s-features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.s-feature-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:var(--r);padding:36px 28px;transition:all .3s var(--ease)}
+.s-feature-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(10,40,70,.08)}
+.s-feature-card .icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px}
+.s-feature-card .icon.blue{background:var(--accent-light);color:var(--accent)}
+.s-feature-card .icon.green{background:var(--green-light);color:var(--green)}
+.s-feature-card .icon.orange{background:var(--orange-light);color:var(--orange)}
+.s-feature-card h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:12px}
+.s-feature-card p{font-size:14px;color:var(--sub);line-height:1.8}
+
+/* ===== Target Audience ===== */
+.s-target-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.s-target-item{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:var(--r-sm);padding:24px;transition:all .2s var(--ease)}
+.s-target-item:hover{border-color:var(--accent);background:var(--accent-light)}
+.s-target-item .check{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent-light);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:14px}
+.s-target-item p{font-size:15px;font-weight:500;color:var(--text)}
+
+/* ===== Flow ===== */
+.s-flow-steps{display:flex;align-items:flex-start;gap:0;position:relative;flex-wrap:wrap;justify-content:center}
+.s-flow-step{flex:0 0 200px;text-align:center;position:relative;padding:0 8px}
+.s-flow-step-num{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;position:relative;z-index:2}
+.s-flow-step-num.highlight{background:var(--orange);box-shadow:0 4px 16px rgba(230,126,34,.3)}
+.s-flow-step h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.s-flow-step p{font-size:13px;color:var(--sub);line-height:1.7}
+.s-flow-arrow{flex:0 0 40px;display:flex;align-items:center;justify-content:center;padding-top:12px;color:var(--accent);font-size:20px}
+.s-flow-highlight{margin-top:48px;background:linear-gradient(135deg,var(--orange-light),#fff8f0);border:2px solid var(--orange);border-radius:var(--r);padding:32px;text-align:center}
+.s-flow-highlight h3{font-size:20px;font-weight:700;color:var(--orange);margin-bottom:12px}
+.s-flow-highlight p{font-size:15px;color:var(--text);line-height:1.8}
+
+/* ===== Offerings ===== */
+.s-offer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.s-offer-card{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .3s var(--ease)}
+.s-offer-card:hover{box-shadow:0 8px 24px rgba(10,40,70,.08)}
+.s-offer-card-header{padding:28px;background:var(--navy);color:#fff}
+.s-offer-card-header.accent{background:var(--accent)}
+.s-offer-card-header h3{font-size:20px;font-weight:700;margin-bottom:4px}
+.s-offer-card-header .price{font-size:14px;opacity:.85}
+.s-offer-card-body{padding:28px}
+.s-offer-card-body ul{display:flex;flex-direction:column;gap:12px}
+.s-offer-card-body li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text);line-height:1.7}
+.s-offer-card-body li i{color:var(--accent);margin-top:4px;flex-shrink:0}
+
+/* ===== Curriculum ===== */
+.s-curriculum-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.s-curriculum-item{background:var(--white);border:1px solid var(--border);border-radius:var(--r-sm);padding:20px;transition:all .2s var(--ease)}
+.s-curriculum-item:hover{border-color:var(--accent);box-shadow:0 4px 12px rgba(40,100,240,.08)}
+.s-curriculum-item .num{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:6px}
+.s-curriculum-item h4{font-size:14px;font-weight:600;color:var(--navy);line-height:1.5;margin-bottom:6px}
+.s-curriculum-item .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;background:var(--accent-light);color:var(--accent);font-weight:500}
+
+/* ===== Schedule Table ===== */
+.s-schedule-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.s-schedule-day{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.s-schedule-day-header{background:var(--navy);color:#fff;padding:16px 24px;font-size:18px;font-weight:700;text-align:center}
+.s-schedule-day-header.day2{background:var(--accent)}
+.s-schedule-day table{width:100%}
+.s-schedule-day th{background:var(--bg);font-size:13px;font-weight:600;color:var(--navy);padding:10px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.s-schedule-day td{font-size:13px;color:var(--text);padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6}
+.s-schedule-day tr:last-child td{border-bottom:none}
+.s-schedule-day .time{font-weight:600;white-space:nowrap;color:var(--navy);width:110px}
+.s-schedule-day .content{font-weight:600}
+
+/* ===== Program Table ===== */
+.s-program-section{margin-bottom:32px}
+.s-program-section h3{font-size:16px;font-weight:700;color:var(--navy);padding:12px 20px;background:var(--bg);border-left:4px solid var(--accent);border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:12px}
+.s-program-table{width:100%;border:1px solid var(--border);border-radius:var(--r-sm);overflow:hidden}
+.s-program-table th{background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:10px 12px;text-align:left}
+.s-program-table td{font-size:13px;padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text)}
+.s-program-table tr:last-child td{border-bottom:none}
+.s-program-table tr:hover td{background:var(--accent-light)}
+.s-program-table .est{text-align:center;font-weight:600;color:var(--accent)}
+
+/* ===== Communication ===== */
+.s-comm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.s-comm-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:32px 24px;text-align:center;transition:all .3s var(--ease)}
+.s-comm-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(10,40,70,.06)}
+.s-comm-card .icon-wrap{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.s-comm-card h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.s-comm-card p{font-size:13px;color:var(--sub);line-height:1.7}
+
+/* ===== Instructor ===== */
+.s-instructor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.s-instructor-card{display:flex;gap:28px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:32px;transition:all .3s var(--ease)}
+.s-instructor-card:hover{box-shadow:0 8px 24px rgba(10,40,70,.06)}
+.s-instructor-photo{flex-shrink:0;width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid var(--bg)}
+.s-instructor-photo img{width:100%;height:100%;object-fit:cover}
+.s-instructor-photo .placeholder{width:100%;height:100%;background:var(--navy);display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px;font-weight:700}
+.s-instructor-info h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.s-instructor-info .role{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:12px}
+.s-instructor-info p{font-size:13px;color:var(--sub);line-height:1.8}
+.s-instructor-info .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.s-instructor-info .badge{font-size:11px;padding:4px 10px;border-radius:4px;background:var(--accent-light);color:var(--accent);font-weight:500}
+
+/* ===== Video Placeholder ===== */
+.s-video-placeholder{background:var(--white);border:2px dashed var(--border);border-radius:var(--r);padding:64px 32px;text-align:center;max-width:640px;margin:0 auto}
+.s-video-placeholder i{font-size:48px;color:var(--muted);margin-bottom:16px}
+.s-video-placeholder h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+.s-video-placeholder p{font-size:14px;color:var(--muted)}
+
+/* ===== Employment ===== */
+.s-employ-hero{background:linear-gradient(135deg,var(--orange-light),#fff8f0);border:2px solid var(--orange);border-radius:var(--r);padding:48px;margin-bottom:40px;text-align:center}
+.s-employ-hero h3{font-size:24px;font-weight:700;color:var(--orange);margin-bottom:16px}
+.s-employ-hero p{font-size:16px;color:var(--text);line-height:1.9;max-width:700px;margin:0 auto}
+.s-employ-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.s-employ-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:28px;border-left:4px solid var(--accent)}
+.s-employ-card h4{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.s-employ-card .wage{font-size:22px;font-weight:700;color:var(--accent);margin-bottom:12px}
+.s-employ-card .wage small{font-size:14px;font-weight:500;color:var(--sub)}
+.s-employ-card p{font-size:14px;color:var(--sub);line-height:1.8}
+.s-employ-card ul{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.s-employ-card li{font-size:13px;color:var(--text);display:flex;align-items:flex-start;gap:8px}
+.s-employ-card li i{color:var(--accent);margin-top:3px;flex-shrink:0}
+.s-employ-partners{margin-top:40px;text-align:center}
+.s-employ-partners p{font-size:14px;color:var(--sub);margin-bottom:16px}
+.s-employ-partner-logos{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.s-employ-partner-logos .partner{font-size:14px;color:var(--navy);font-weight:600;padding:12px 24px;background:var(--bg);border-radius:var(--r-sm);border:1px solid var(--border)}
+
+/* ===== Pricing ===== */
+.s-pricing{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.s-pricing::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px)}
+.s-pricing .s-eyebrow{color:rgba(255,255,255,.5)}
+.s-pricing .s-title{color:#fff}
+.s-pricing-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:48px;max-width:640px;margin:0 auto;text-align:center;position:relative}
+.s-pricing-amount{font-size:56px;font-weight:700;margin-bottom:8px;line-height:1}
+.s-pricing-amount small{font-size:20px;font-weight:500}
+.s-pricing-note{font-size:14px;opacity:.7;margin-bottom:32px}
+.s-pricing-includes{text-align:left;display:flex;flex-direction:column;gap:12px}
+.s-pricing-includes li{display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.7}
+.s-pricing-includes li i{color:var(--accent);margin-top:4px;flex-shrink:0}
+.s-pricing-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 48px;background:var(--accent);color:#fff;font-size:17px;font-weight:600;border-radius:8px;transition:all .2s var(--ease);margin-top:36px;box-shadow:0 4px 24px rgba(40,100,240,.3)}
+.s-pricing-btn:hover{background:#1b4fd0;transform:translateY(-2px)}
+
+/* ===== FAQ ===== */
+.s-faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.s-faq-item{border:1px solid var(--border);border-radius:var(--r-sm);overflow:hidden}
+.s-faq-q{padding:20px 24px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;align-items:center;gap:12px;transition:background .2s}
+.s-faq-q:hover{background:var(--bg)}
+.s-faq-q::before{content:'Q';flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.s-faq-a{padding:0 24px 20px 64px;font-size:14px;color:var(--sub);line-height:1.8}
+
+/* ===== CTA ===== */
+.s-cta{background:linear-gradient(135deg,#e8eef6,#f0f4f8);padding:96px 0;text-align:center}
+.s-cta h2{font-size:clamp(22px,4vw,32px);font-weight:700;color:var(--navy);margin-bottom:16px}
+.s-cta p{font-size:16px;color:var(--sub);margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
+.s-cta-btn{display:inline-flex;align-items:center;gap:10px;padding:20px 56px;background:var(--accent);color:#fff;font-size:18px;font-weight:600;border-radius:8px;transition:all .2s var(--ease);box-shadow:0 4px 24px rgba(40,100,240,.2)}
+.s-cta-btn:hover{background:#1b4fd0;transform:translateY(-2px);box-shadow:0 8px 32px rgba(40,100,240,.3)}
+
+/* ===== Footer ===== */
+.s-footer{background:var(--navy);padding:40px 0;text-align:center}
+.s-footer-logo img{height:28px;margin:0 auto 16px;opacity:.8}
+.s-footer-copy{font-size:12px;color:rgba(255,255,255,.4)}
+
+/* ===== Animation ===== */
+.s-fade{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.s-fade.visible{opacity:1;transform:none}
+.s-d1{transition-delay:.08s}.s-d2{transition-delay:.16s}.s-d3{transition-delay:.24s}
+.s-d4{transition-delay:.32s}.s-d5{transition-delay:.4s}.s-d6{transition-delay:.48s}
+
+/* ===== Responsive ===== */
+@media(max-width:991px){
+  .s-hero-inner{flex-direction:column;gap:40px}
+  .s-hero-visual{flex:0 0 auto;max-width:320px;margin:0 auto}
+  .s-hero-metrics{grid-template-columns:repeat(2,1fr)}
+  .s-features-grid{grid-template-columns:1fr}
+  .s-schedule-wrap{grid-template-columns:1fr}
+  .s-instructor-grid{grid-template-columns:1fr}
+  .s-offer-grid{grid-template-columns:1fr}
+  .s-employ-grid{grid-template-columns:1fr}
+  .s-flow-steps{flex-direction:column;align-items:center}
+  .s-flow-arrow{transform:rotate(90deg)}
+  .s-comm-grid{grid-template-columns:1fr}
+}
+@media(max-width:767px){
+  .s-section{padding:64px 0}
+  .s-hero{padding:100px 0 64px}
+  .s-hero-metrics{grid-template-columns:repeat(2,1fr);gap:12px}
+  .s-target-grid{grid-template-columns:1fr}
+  .s-curriculum-grid{grid-template-columns:1fr}
+  .s-instructor-card{flex-direction:column;align-items:center;text-align:center}
+  .s-instructor-info .badges{justify-content:center}
+  .s-pricing-amount{font-size:42px}
+  .s-trust-inner{gap:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="s-header" id="header">
+  <div class="s-container s-header-inner">
+    <a href="#" class="s-header-logo"><img src="images/hatenabase-logo.png" alt="Hatenabase"/></a>
+    <a href="https://forms.gle/jZJqmp64uMNd4h7P7" target="_blank" class="s-header-cta"><i class="fa-solid fa-paper-plane"></i> 研修に申し込む</a>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="s-hero">
+  <div class="s-container s-hero-inner">
+    <div class="s-hero-text">
+      <p class="s-eyebrow">Hatenabase freee Training Program</p>
+      <h1>freee会計を学び、<br><em>経理のプロ</em>として働く</h1>
+      <p class="s-hero-desc">速習freee会計研修は、E-learning（約8時間）と実地研修（2日間）を通じてfreee会計の実務スキルを短期集中で習得するプログラムです。研修修了後は、はてなベースのメンバーとして就労先をご紹介します。</p>
+      <div class="s-hero-metrics">
+        <div class="s-hero-metric s-fade"><div class="s-hero-metric-num">8<small>時間</small></div><div class="s-hero-metric-label">E-learning動画</div></div>
+        <div class="s-hero-metric s-fade s-d1"><div class="s-hero-metric-num">2<small>日間</small></div><div class="s-hero-metric-label">実地研修</div></div>
+        <div class="s-hero-metric s-fade s-d2"><div class="s-hero-metric-num">50,000<small>円</small></div><div class="s-hero-metric-label">受講料（税込）</div></div>
+        <div class="s-hero-metric s-fade s-d3"><div class="s-hero-metric-num"><i class="fa-solid fa-briefcase" style="font-size:20px"></i></div><div class="s-hero-metric-label">就労先紹介あり</div></div>
+      </div>
+      <a href="https://forms.gle/jZJqmp64uMNd4h7P7" target="_blank" class="s-hero-btn"><i class="fa-solid fa-paper-plane"></i> 研修に申し込む</a>
+    </div>
+    <div class="s-hero-visual s-fade s-d2">
+      <div class="s-hero-badge">就労先紹介付き</div>
+      <!-- Hero illustration SVG -->
+      <svg viewBox="0 0 380 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="60" width="300" height="200" rx="16" fill="#f5f8fb" stroke="#e5e5e5"/>
+        <rect x="70" y="90" width="120" height="24" rx="4" fill="#2864F0" opacity=".15"/>
+        <rect x="70" y="124" width="240" height="12" rx="3" fill="#e5e5e5"/>
+        <rect x="70" y="146" width="200" height="12" rx="3" fill="#e5e5e5"/>
+        <rect x="70" y="168" width="180" height="12" rx="3" fill="#e5e5e5"/>
+        <rect x="70" y="200" width="100" height="32" rx="6" fill="#2864F0"/>
+        <text x="120" y="221" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">freee会計</text>
+        <rect x="190" y="200" width="100" height="32" rx="6" fill="#0A2846"/>
+        <text x="240" y="221" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">実地研修</text>
+        <circle cx="320" cy="80" r="24" fill="#2864F0" opacity=".1"/>
+        <circle cx="60" cy="240" r="16" fill="#e67e22" opacity=".15"/>
+        <!-- Person icon -->
+        <circle cx="330" cy="280" r="20" fill="#0A2846" opacity=".08"/>
+        <path d="M320 290 Q330 270 340 290" stroke="#0A2846" stroke-width="2" fill="none" opacity=".15"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust Bar ===== -->
+<div class="s-trust">
+  <div class="s-container s-trust-inner">
+    <div class="s-trust-item">
+      <img src="images/hatenabase-logo.png" alt="Hatenabase" style="height:24px"/>
+    </div>
+    <div class="s-trust-item" style="font-size:20px;color:#0A2846;">×</div>
+    <div class="s-trust-item">
+      <img src="images/freee-logo.png" alt="freee" style="height:24px"/>
+    </div>
+    <div class="s-trust-item" style="opacity:.4;font-size:13px;color:#8a8a8a">|</div>
+    <div class="s-trust-item">
+      <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.5 3.6C17.1 1.2 13.8 0 10.2 0H0V24H10.2C13.8 24 17.1 22.8 19.5 20.4C21.9 18 23.1 14.7 23.1 12C23.1 9.3 21.9 6 19.5 3.6Z" fill="#E01E5A" opacity=".85"/>
+        <text x="26" y="17" font-size="13" fill="#5a5a5a" font-weight="600" font-family="Zen Kaku Gothic New,sans-serif">Slack</text>
+      </svg>
+    </div>
+    <div class="s-trust-item" style="opacity:.4;font-size:13px;color:#8a8a8a">|</div>
+    <div class="s-trust-item">
+      <span style="font-size:13px;font-weight:600;color:#5a5a5a;">DIGITAL BASE 認定</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 研修の特徴 ===== -->
+<section class="s-section" style="background:var(--bg)">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Features</p>
+      <h2 class="s-title s-fade">研修の<span>3つの特徴</span></h2>
+      <p class="s-subtitle s-fade">座学だけでは身につかない実務スキルを、E-learning＋実地研修の組み合わせで短期集中習得。修了後は就労先までサポートします。</p>
+    </div>
+    <div class="s-features-grid">
+      <div class="s-feature-card s-fade">
+        <div class="icon blue"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>E-learning + 実地研修</h3>
+        <p>約8時間の動画コンテンツで基礎を学んだ後、freeeのデモ環境を使った「バーチャル月次決算」で実務を体験。講師の指導のもと、架空の会社で実際の月次決算業務を行います。</p>
+      </div>
+      <div class="s-feature-card s-fade s-d1">
+        <div class="icon green"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <h3>現場目線の講師陣</h3>
+        <p>大手監査法人出身の代表・世戸口と、約80社の顧問先を持つ田村税理士がE-learningコンテンツを監修。実務で本当に使うスキルに特化したカリキュラムです。</p>
+      </div>
+      <div class="s-feature-card s-fade s-d2">
+        <div class="icon orange"><i class="fa-solid fa-handshake"></i></div>
+        <h3>修了後の就労先紹介</h3>
+        <p>研修修了後は、はてなベースのメンバーとしてBPO大手企業や会計事務所での就労をご紹介。フルリモート・在宅勤務の案件も多数ご用意しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== こんな方におすすめ ===== -->
+<section class="s-section">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Target</p>
+      <h2 class="s-title s-fade">こんな方に<span>おすすめ</span>です</h2>
+    </div>
+    <div class="s-target-grid">
+      <div class="s-target-item s-fade">
+        <div class="check"><i class="fa-solid fa-check" style="font-size:12px"></i></div>
+        <p>経理実務経験はあるが、freee会計は未経験の方</p>
+      </div>
+      <div class="s-target-item s-fade s-d1">
+        <div class="check"><i class="fa-solid fa-check" style="font-size:12px"></i></div>
+        <p>在宅・フルリモートで経理業務に携わりたい方</p>
+      </div>
+      <div class="s-target-item s-fade s-d2">
+        <div class="check"><i class="fa-solid fa-check" style="font-size:12px"></i></div>
+        <p>ブランクがあるが経理の仕事に復帰したい方</p>
+      </div>
+      <div class="s-target-item s-fade s-d3">
+        <div class="check"><i class="fa-solid fa-check" style="font-size:12px"></i></div>
+        <p>フリーランスとして経理スキルを活かして働きたい方</p>
+      </div>
+      <div class="s-target-item s-fade s-d4">
+        <div class="check"><i class="fa-solid fa-check" style="font-size:12px"></i></div>
+        <p>簿記資格は持っているが実務経験が少ない方</p>
+      </div>
+      <div class="s-target-item s-fade s-d5">
+        <div class="check"><i class="fa-solid fa-check" style="font-size:12px"></i></div>
+        <p>クラウド会計のスキルを身につけてキャリアアップしたい方</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 研修から就労までの流れ ===== -->
+<section class="s-section" style="background:var(--bg)">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Flow</p>
+      <h2 class="s-title s-fade">研修から<span>就労</span>までの流れ</h2>
+      <p class="s-subtitle s-fade">研修を修了すれば、はてなベースのメンバーとして就労先をご紹介。スキルを身につけながら、次のキャリアへの一歩を踏み出せます。</p>
+    </div>
+    <div class="s-flow-steps s-fade">
+      <div class="s-flow-step">
+        <div class="s-flow-step-num">1</div>
+        <h4>お申し込み</h4>
+        <p>フォームから申込み<br>NDA締結</p>
+      </div>
+      <div class="s-flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="s-flow-step">
+        <div class="s-flow-step-num">2</div>
+        <h4>E-learning</h4>
+        <p>約8時間の動画を<br>自分のペースで受講</p>
+      </div>
+      <div class="s-flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="s-flow-step">
+        <div class="s-flow-step-num">3</div>
+        <h4>実地研修</h4>
+        <p>2日間のバーチャル<br>月次決算プログラム</p>
+      </div>
+      <div class="s-flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="s-flow-step">
+        <div class="s-flow-step-num">4</div>
+        <h4>修了テスト</h4>
+        <p>実践形式のテストで<br>スキルを確認</p>
+      </div>
+      <div class="s-flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="s-flow-step">
+        <div class="s-flow-step-num highlight">5</div>
+        <h4>就労先紹介</h4>
+        <p>はてなベースの一員<br>として就労開始</p>
+      </div>
+    </div>
+    <div class="s-flow-highlight s-fade">
+      <h3><i class="fa-solid fa-star" style="margin-right:8px"></i>有償研修だからこそ、確かなキャリアにつながる</h3>
+      <p>50,000円の受講料で、freee会計の実務スキルと修了証を取得。さらに、研修修了者には<strong>はてなベースのメンバーとして就労先をご紹介</strong>します。<br>経理BPO大手企業や会計事務所など、フルリモート対応の就労先が見つかる可能性があります。<br>「学んで終わり」ではなく、<strong>「学んだら働ける」</strong>研修です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 提供するもの ===== -->
+<section class="s-section">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">What We Offer</p>
+      <h2 class="s-title s-fade">提供する<span>2つ</span>のサービス</h2>
+    </div>
+    <div class="s-offer-grid">
+      <div class="s-offer-card s-fade">
+        <div class="s-offer-card-header">
+          <h3><i class="fa-solid fa-graduation-cap" style="margin-right:8px"></i>速習freee会計研修</h3>
+          <div class="price">50,000円（税込）/ 人</div>
+        </div>
+        <div class="s-offer-card-body">
+          <ul>
+            <li><i class="fa-solid fa-check"></i>E-learning動画コンテンツ（約8時間・全15レッスン）</li>
+            <li><i class="fa-solid fa-check"></i>バーチャル月次決算（2日間の実地研修）</li>
+            <li><i class="fa-solid fa-check"></i>freeeデモ環境の利用</li>
+            <li><i class="fa-solid fa-check"></i>Slackでの質問対応・講師フィードバック</li>
+            <li><i class="fa-solid fa-check"></i>修了テスト・修了証の発行</li>
+            <li><i class="fa-solid fa-check"></i>講師による個別キャリア相談</li>
+          </ul>
+        </div>
+      </div>
+      <div class="s-offer-card s-fade s-d1">
+        <div class="s-offer-card-header accent">
+          <h3><i class="fa-solid fa-briefcase" style="margin-right:8px"></i>就労先の紹介</h3>
+          <div class="price">研修修了者限定・追加費用なし</div>
+        </div>
+        <div class="s-offer-card-body">
+          <ul>
+            <li><i class="fa-solid fa-check"></i>はてなベースのメンバーとして就労先をマッチング</li>
+            <li><i class="fa-solid fa-check"></i>経理BPO大手企業での経理実務コンサルタント案件</li>
+            <li><i class="fa-solid fa-check"></i>会計事務所でのリモートスタッフ案件</li>
+            <li><i class="fa-solid fa-check"></i>フルリモート・在宅勤務対応の案件多数</li>
+            <li><i class="fa-solid fa-check"></i>時給2,000〜3,000円クラスの案件あり</li>
+            <li><i class="fa-solid fa-check"></i>はてなベースの自社案件へのアサインも可能</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== E-learningカリキュラム ===== -->
+<section class="s-section" style="background:var(--bg)">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">E-learning Curriculum</p>
+      <h2 class="s-title s-fade">E-learning <span>カリキュラム</span></h2>
+      <p class="s-subtitle s-fade">全15レッスン・約8時間の動画コンテンツ。freee会計の基本操作から、自動経理・請求書・レポート活用まで、実務で必要なスキルを網羅的に学びます。</p>
+    </div>
+    <div class="s-curriculum-grid">
+      <div class="s-curriculum-item s-fade">
+        <div class="num">Lesson 1</div>
+        <h4>freee会計の基本機能</h4>
+        <span class="tag">基礎</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d1">
+        <div class="num">Lesson 2</div>
+        <h4>freee会計独自の機能「タグ」という概念</h4>
+        <span class="tag">基礎</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d2">
+        <div class="num">Lesson 3</div>
+        <h4>自動で経理 ― 自動で経理とは？</h4>
+        <span class="tag">自動経理</span>
+      </div>
+      <div class="s-curriculum-item s-fade">
+        <div class="num">Lesson 4</div>
+        <h4>自動で経理 ― 取引明細の主な処理パターンと税区分の設定</h4>
+        <span class="tag">自動経理</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d1">
+        <div class="num">Lesson 5</div>
+        <h4>自動で経理 ― freee人事労務から登録された給与の消込</h4>
+        <span class="tag">自動経理</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d2">
+        <div class="num">Lesson 6</div>
+        <h4>自動登録ルール ― 自動登録ルールとは？</h4>
+        <span class="tag">自動化</span>
+      </div>
+      <div class="s-curriculum-item s-fade">
+        <div class="num">Lesson 7</div>
+        <h4>自動登録ルール ― 処理パターンごとの設定と条件設定</h4>
+        <span class="tag">自動化</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d1">
+        <div class="num">Lesson 8</div>
+        <h4>自動登録ルール ― テンプレートの活用と運用精度の向上</h4>
+        <span class="tag">自動化</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d2">
+        <div class="num">Lesson 9</div>
+        <h4>freee請求書の発行と取引登録までの流れ</h4>
+        <span class="tag">請求書</span>
+      </div>
+      <div class="s-curriculum-item s-fade">
+        <div class="num">Lesson 10</div>
+        <h4>発行済み請求書の修正と応用的な機能</h4>
+        <span class="tag">請求書</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d1">
+        <div class="num">Lesson 11</div>
+        <h4>取引の一覧・登録 ― 既存取引の管理と修正</h4>
+        <span class="tag">取引管理</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d2">
+        <div class="num">Lesson 12</div>
+        <h4>取引の一覧・登録 ― 一括編集とブラス更新</h4>
+        <span class="tag">取引管理</span>
+      </div>
+      <div class="s-curriculum-item s-fade">
+        <div class="num">Lesson 13</div>
+        <h4>仕訳の確認方法および月次推移とレポート活用術</h4>
+        <span class="tag">レポート</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d1">
+        <div class="num">Lesson 14</div>
+        <h4>連続取引登録を活用した請求書と立替レシートの取引登録</h4>
+        <span class="tag">実務応用</span>
+      </div>
+      <div class="s-curriculum-item s-fade s-d2">
+        <div class="num">Lesson 15</div>
+        <h4>支払管理レポートを使った総合振込リストの出力</h4>
+        <span class="tag">実務応用</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== バーチャル月次決算プログラム ===== -->
+<section class="s-section">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Hands-on Training</p>
+      <h2 class="s-title s-fade">バーチャル月次決算<span>プログラム</span></h2>
+      <p class="s-subtitle s-fade">E-learningだけでは実務レベルまでは達しないため、デモ環境を使った仮想経理部長のもと、2日間によるバーチャル月次決算プログラムを実施します。</p>
+    </div>
+    <div class="s-schedule-wrap">
+      <!-- Day 1 -->
+      <div class="s-schedule-day s-fade">
+        <div class="s-schedule-day-header">Day 1</div>
+        <table>
+          <thead><tr><th>時間</th><th>内容</th><th>目的・詳細</th></tr></thead>
+          <tbody>
+            <tr><td class="time">09:30-10:00</td><td class="content">開講式・チームビルディング</td><td>合宿全体の流れを説明し、受講者同士の交流を促します。3〜4名ごとのグループを編成します。</td></tr>
+            <tr><td class="time">10:00-12:00</td><td class="content">eラーニング重要ポイント解説</td><td>事前学習でつまずきやすいポイントを講師が改めて解説。疑問点を解消します。</td></tr>
+            <tr><td class="time">12:00-13:00</td><td class="content">休憩</td><td>-</td></tr>
+            <tr><td class="time">13:00-15:00</td><td class="content">バーチャル月次決算（前半）</td><td>講師の指導のもと、架空の会社で実際の月次決算業務を開始します。最初の「トラップ」がいくつか仕込まれています。</td></tr>
+            <tr><td class="time">15:00-15:15</td><td class="content">小休憩</td><td>-</td></tr>
+            <tr><td class="time">15:15-17:00</td><td class="content">グループワーク・演習</td><td>各グループで協力しながら、前半の月次決算を完了させます。講師は巡回して個別にアドバイスします。</td></tr>
+            <tr><td class="time">17:00-18:00</td><td class="content">1日の振り返り・質疑応答</td><td>その日に学んだことをグループで共有し、講師への全体質疑応答で知識を定着させます。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Day 2 -->
+      <div class="s-schedule-day s-fade s-d1">
+        <div class="s-schedule-day-header day2">Day 2</div>
+        <table>
+          <thead><tr><th>時間</th><th>内容</th><th>目的・詳細</th></tr></thead>
+          <tbody>
+            <tr><td class="time">09:30-10:00</td><td class="content">前日の復習</td><td>前日の演習内容を振り返り、グループ内で進捗を確認します。</td></tr>
+            <tr><td class="time">10:00-12:00</td><td class="content">バーチャル月次決算（後半）</td><td>より複雑な「トラップ」を攻略し、難易度の高い取引の仕訳・計上を実践します。</td></tr>
+            <tr><td class="time">12:00-13:00</td><td class="content">休憩</td><td>-</td></tr>
+            <tr><td class="time">13:00-14:30</td><td class="content">最終演習</td><td>これまでの演習内容を総動員し、決算の最終チェックと確認作業を行います。</td></tr>
+            <tr><td class="time">14:30-14:45</td><td class="content">小休憩</td><td>-</td></tr>
+            <tr><td class="time">14:45-16:45</td><td class="content">修了テスト</td><td>合宿の集大成として、freeeの実務能力を問う実践形式のテストを実施します。</td></tr>
+            <tr><td class="time">16:45-17:30</td><td class="content">講評・キャリア相談</td><td>講師からテストのポイント解説と合宿全体の講評を行います。就労先についてもご案内します。</td></tr>
+            <tr><td class="time">17:30-18:00</td><td class="content">閉講式・修了証授与</td><td>合格者には修了証を授与し、今後のキャリアサポートについて説明します。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 経理プログラム一覧 ===== -->
+<section class="s-section" style="background:var(--bg)">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Full Program</p>
+      <h2 class="s-title s-fade">経理プログラム<span>一覧</span></h2>
+      <p class="s-subtitle s-fade">バーチャル月次決算で取り組む全34項目の経理業務プログラム。実務で必要な一連の業務フローを網羅的にカバーします。</p>
+    </div>
+
+    <!-- 現金取引 -->
+    <div class="s-program-section s-fade">
+      <h3><i class="fa-solid fa-coins" style="margin-right:8px"></i>会計取引</h3>
+      <table class="s-program-table">
+        <thead><tr><th>#</th><th>内容</th><th>目安時間</th><th>受講者の作業内容</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>収入支出形式</td><td class="est">10分</td><td>収入支出形式から取引の入力（20件程度）</td></tr>
+          <tr><td>2</td><td>仕訳帳形式</td><td class="est">5分</td><td>仕訳帳形式から取引の入力（20件程度）</td></tr>
+          <tr><td>3</td><td>元帳形式</td><td class="est">5分</td><td>元帳形式から取引の入力（20件程度）</td></tr>
+          <tr><td>4</td><td>連続取引</td><td class="est">10分</td><td>連続取引から取引の入力（20件程度）</td></tr>
+          <tr><td>5</td><td>明細インポート</td><td class="est">10分</td><td>ファイルボックスからレシートの取込（10枚程度）</td></tr>
+          <tr><td>6</td><td>エクセルインポート</td><td class="est">10分</td><td>エクセルのインポート</td></tr>
+          <tr><td>7</td><td>経費精算</td><td class="est">15分</td><td>経費申請の申請方法と承認方法</td></tr>
+          <tr><td>8</td><td>本社小口経費</td><td class="est">15分</td><td>現金のインポート</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 自動で経理 -->
+    <div class="s-program-section s-fade">
+      <h3><i class="fa-solid fa-robot" style="margin-right:8px"></i>自動で経理</h3>
+      <table class="s-program-table">
+        <thead><tr><th>#</th><th>内容</th><th>目安時間</th><th>受講者の作業内容</th></tr></thead>
+        <tbody>
+          <tr><td>9</td><td>売上入力</td><td class="est">30分</td><td>-</td></tr>
+          <tr><td>10</td><td>明細の登録（クレカ）</td><td class="est">20分</td><td>クレジットカードの取引登録（40件程度）</td></tr>
+          <tr><td>11</td><td>明細の登録（銀行）</td><td class="est">45分</td><td>銀行口座の取引登録（100件程度）</td></tr>
+          <tr><td>11-1</td><td>自動登録ルール作成</td><td class="est">10分</td><td>自動登録ルールの作成（一定の取引を自動化）</td></tr>
+          <tr><td>11-2</td><td>入金の相殺</td><td class="est">10分</td><td>手数料を引いた入金の処理、複数取引に対しての入金登録</td></tr>
+          <tr><td>11-3</td><td>翌月3稿</td><td class="est">5分</td><td>自動で登録上で経費発生日の変更</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 設定 -->
+    <div class="s-program-section s-fade">
+      <h3><i class="fa-solid fa-gear" style="margin-right:8px"></i>設定</h3>
+      <table class="s-program-table">
+        <thead><tr><th>#</th><th>内容</th><th>目安時間</th><th>受講者の作業内容</th></tr></thead>
+        <tbody>
+          <tr><td>12</td><td>タグの設定</td><td class="est">-</td><td>勘定設定しても分かりやすいように</td></tr>
+          <tr><td>13</td><td>テンプレート作成</td><td class="est">10分</td><td>頻出する仕訳のテンプレート登録</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 請求書・納品書 -->
+    <div class="s-program-section s-fade">
+      <h3><i class="fa-solid fa-file-invoice" style="margin-right:8px"></i>請求書・納品書</h3>
+      <table class="s-program-table">
+        <thead><tr><th>#</th><th>内容</th><th>目安時間</th><th>受講者の作業内容</th></tr></thead>
+        <tbody>
+          <tr><td>14</td><td>納品書・日報作成</td><td class="est">-</td><td>-</td></tr>
+          <tr><td>15</td><td>納品書</td><td class="est">30分</td><td>納品書の作成（40枚程度）</td></tr>
+          <tr><td>16</td><td>請求書</td><td class="est">60分</td><td>請求書の作成と取引の登録（20枚程度）</td></tr>
+          <tr><td>17</td><td>試算表・月次確認</td><td class="est">10分</td><td>タグが付いた取引の確認と異常数値の確認・修正</td></tr>
+          <tr><td>18</td><td>入金管理レポート</td><td class="est">5分</td><td>未入金住区の確認と誤った入金の取引修正</td></tr>
+          <tr><td>19</td><td>支払管理レポート</td><td class="est">20分</td><td>未払の確認と一括振込ファイルの作成</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 決算 -->
+    <div class="s-program-section s-fade">
+      <h3><i class="fa-solid fa-calculator" style="margin-right:8px"></i>決算</h3>
+      <table class="s-program-table">
+        <thead><tr><th>#</th><th>内容</th><th>目安時間</th><th>受講者の作業内容</th></tr></thead>
+        <tbody>
+          <tr><td>20</td><td>タイムラインの確認</td><td class="est">30分</td><td>自動連携期間との取引と取引入力と銀行残高の確認</td></tr>
+          <tr><td>21</td><td>残高の確認</td><td class="est">10分</td><td>口座残高口座の残高確認</td></tr>
+          <tr><td>22</td><td>棚卸</td><td class="est">10分</td><td>月次棚卸の入力（次期算の入力）</td></tr>
+          <tr><td>23</td><td>固定資産台帳</td><td class="est">20分</td><td>固定資産の登録・除却（5件程度）、月次償却への変更</td></tr>
+          <tr><td>24</td><td>重複確認</td><td class="est">10分</td><td>重複データの確認と削除</td></tr>
+          <tr><td>25</td><td>税区分割り</td><td class="est">15分</td><td>税区分割りの確認方法と修正方法</td></tr>
+          <tr><td>26</td><td>前受処理</td><td class="est">15分</td><td>前月前払費用の修正（5件程度）</td></tr>
+          <tr><td>27</td><td>前払期間の処理</td><td class="est">15分</td><td>前払期間の処理方法の確認</td></tr>
+          <tr><td>28</td><td>立替金・手当給</td><td class="est">10分</td><td>従業員の使途、差額の処理について</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 人事労務 -->
+    <div class="s-program-section s-fade">
+      <h3><i class="fa-solid fa-users" style="margin-right:8px"></i>人事労務</h3>
+      <table class="s-program-table">
+        <thead><tr><th>#</th><th>内容</th><th>目安時間</th><th>受講者の作業内容</th></tr></thead>
+        <tbody>
+          <tr><td>29</td><td>従業員の登録</td><td class="est">45分</td><td>正社員とパートの入力（ご様式）10人程度</td></tr>
+          <tr><td>30</td><td>タイムカードの確認</td><td class="est">20分</td><td>タイムカードの確認と修正</td></tr>
+          <tr><td>31</td><td>給与計算</td><td class="est">40分</td><td>給与計算（交通費や手当の入力）</td></tr>
+          <tr><td>32</td><td>源泉所得税と住民税の計算</td><td class="est">10分</td><td>源泉所得税と住民税計算の出力</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- その他 -->
+    <div class="s-program-section s-fade">
+      <h3><i class="fa-solid fa-folder-open" style="margin-right:8px"></i>その他処理</h3>
+      <table class="s-program-table">
+        <thead><tr><th>#</th><th>内容</th><th>目安時間</th><th>受講者の作業内容</th></tr></thead>
+        <tbody>
+          <tr><td>33</td><td>年末調整</td><td class="est">90分</td><td>年末調整処理</td></tr>
+          <tr><td>34</td><td>各帳簿作成</td><td class="est">20分</td><td>賃金台帳や各種手続書類の確認</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 研修の進め方 ===== -->
+<section class="s-section">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">How It Works</p>
+      <h2 class="s-title s-fade">研修の<span>進め方</span></h2>
+      <p class="s-subtitle s-fade">講師1名に対して5人〜10名の受講者をSlackに招待し、freeeのデモ環境を5日間から10日間じっくり触っていただきます。</p>
+    </div>
+    <div class="s-comm-grid">
+      <div class="s-comm-card s-fade">
+        <div class="icon-wrap" style="background:var(--accent-light)">
+          <!-- Slack icon -->
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 17.5a2.5 2.5 0 1 1 0-5h2.5v2.5A2.5 2.5 0 0 1 6 17.5zm6.5-2.5a2.5 2.5 0 1 1 5 0V22a2.5 2.5 0 1 1-5 0v-7zm2.5-9a2.5 2.5 0 1 1 0 5h-2.5V8.5A2.5 2.5 0 0 1 15 6zm2.5 6.5a2.5 2.5 0 1 1-5 0V10H15a2.5 2.5 0 0 1 2.5 2.5z" fill="#2864F0"/></svg>
+        </div>
+        <h4>Slackでリアルタイム対応</h4>
+        <p>専用チャンネルで講師に質問し放題。受講者同士の情報共有や学び合いの場としても活用します。</p>
+      </div>
+      <div class="s-comm-card s-fade s-d1">
+        <div class="icon-wrap" style="background:var(--green-light)">
+          <i class="fa-solid fa-desktop" style="font-size:24px;color:var(--green)"></i>
+        </div>
+        <h4>freeeデモ環境で実践</h4>
+        <p>本番同様のfreee環境で練習。架空の会社データを使って、月次決算の一連の流れを実体験します。</p>
+      </div>
+      <div class="s-comm-card s-fade s-d2">
+        <div class="icon-wrap" style="background:var(--orange-light)">
+          <i class="fa-solid fa-comments" style="font-size:24px;color:var(--orange)"></i>
+        </div>
+        <h4>講師からの個別FB</h4>
+        <p>1単元につき1時間のフィードバック時間を設定。つまずきポイントを個別に解消し、確実にスキルを定着させます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== E-learning講師紹介 ===== -->
+<section class="s-section" style="background:var(--bg)">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Instructors</p>
+      <h2 class="s-title s-fade">E-learning <span>講師紹介</span></h2>
+    </div>
+    <div class="s-instructor-grid">
+      <div class="s-instructor-card s-fade">
+        <div class="s-instructor-photo">
+          <img src="images/seto-profile.jpg" alt="世戸口 逸人"/>
+        </div>
+        <div class="s-instructor-info">
+          <h3>世戸口 逸人</h3>
+          <div class="role">Hatenabase, inc. 代表取締役</div>
+          <p>大手監査法人、ベンチャー企業を経て2023年2月にはてなベース株式会社を設立。現在は、スタートアップや上場準備中の企業にkintone/Salesforceの導入を中心とするバックオフィスBPR事業を展開する。<br><br>また、freee会計の導入やコンテンツ提供にも注力し、フリー社の協力のもと制作した速習freee会計研修は現在β版を提供しており、会計事務所のデジタル人材育成に尽力している。</p>
+          <div class="badges">
+            <span class="badge">一般社団法人DIGITALBASE 理事</span>
+            <span class="badge">freee認定アドバイザー</span>
+          </div>
+        </div>
+      </div>
+      <div class="s-instructor-card s-fade s-d1">
+        <div class="s-instructor-photo">
+          <img src="images/tamura-profile.jpg" alt="田村 直大" onerror="this.parentElement.innerHTML='<div class=placeholder>田</div>'"/>
+        </div>
+        <div class="s-instructor-info">
+          <h3>田村 直大</h3>
+          <div class="role">田村直大税理士事務所 代表 / 公認会計士</div>
+          <p>「起業家が経営に集中できる環境をつくりたい」という想いで、2023年に田村直大税理士事務所を開設。創業期〜成長期のスタートアップを中心に、freee会計を活用した効率的な税務・会計支援を提供。<br><br>公認会計士としての財務知識と、クラウドツールを駆使した業務効率化の両軸で、記帳から申告、資金調達の相談まで、経営者のパートナーとしてトータルサポート。現在、約80社の顧問先を支援。</p>
+          <div class="badges">
+            <span class="badge">公認会計士</span>
+            <span class="badge">税理士</span>
+            <span class="badge">約80社の顧問実績</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 参考動画 ===== -->
+<section class="s-section">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Sample Videos</p>
+      <h2 class="s-title s-fade">E-learningの<span>参考動画</span>はこちら</h2>
+      <p class="s-subtitle s-fade">研修のイメージを掴んでいただくため、E-learningの一部をサンプルとしてご覧いただけます。</p>
+    </div>
+    <div class="s-video-placeholder s-fade">
+      <i class="fa-solid fa-circle-play"></i>
+      <h3>参考動画は準備中です</h3>
+      <p>近日中にサンプル動画を公開予定です。もうしばらくお待ちください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 就労先について ===== -->
+<section class="s-section" style="background:var(--bg)">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Career Path</p>
+      <h2 class="s-title s-fade">研修修了後の<span>就労先</span>について</h2>
+    </div>
+
+    <div class="s-employ-hero s-fade">
+      <h3><i class="fa-solid fa-rocket" style="margin-right:8px"></i>研修を受けることで、働き口が見つかる</h3>
+      <p>速習freee会計研修は、単なるスキルアップ研修ではありません。<br>研修を修了した方には、<strong>はてなベースのメンバーとして就労先をご紹介</strong>します。<br>経理BPO大手企業や会計事務所との提携により、<strong>フルリモート・在宅勤務</strong>で働ける案件を多数ご用意。<br>50,000円の受講料は、あなたの次のキャリアへの投資です。</p>
+    </div>
+
+    <div class="s-employ-grid">
+      <div class="s-employ-card s-fade">
+        <h4><i class="fa-solid fa-building" style="margin-right:8px;color:var(--accent)"></i>経理実務コンサルタント</h4>
+        <div class="wage">時給 2,000〜3,000円<small>（税抜）</small></div>
+        <p>顧客の業務設計から経理実務まで、幅広い業務に携われるポジションです。</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>フルリモート・フルオンラインで就労可能</li>
+          <li><i class="fa-solid fa-check"></i>業務委託契約（自由な働き方）</li>
+          <li><i class="fa-solid fa-check"></i>月50時間以上の稼働で安定収入</li>
+          <li><i class="fa-solid fa-check"></i>freee会計が使える人材は特に歓迎</li>
+          <li><i class="fa-solid fa-check"></i>クライアント折衝・業務設計のスキルも身につく</li>
+        </ul>
+      </div>
+      <div class="s-employ-card s-fade s-d1">
+        <h4><i class="fa-solid fa-laptop-house" style="margin-right:8px;color:var(--accent)"></i>リモートスタッフ</h4>
+        <div class="wage">時給 1,232円〜<small>（税込）</small></div>
+        <p>経理実務コンサルタントの指示のもと、日次〜月次決算の実務を遂行するポジションです。</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>完全在宅・フルリモート勤務</li>
+          <li><i class="fa-solid fa-check"></i>週3日以上・1日3時間以上から勤務可能</li>
+          <li><i class="fa-solid fa-check"></i>経理実務経験または簿記3級以上で応募可能</li>
+          <li><i class="fa-solid fa-check"></i>活躍に応じて単価アップの見直しあり</li>
+          <li><i class="fa-solid fa-check"></i>子育て中の方も多数活躍中</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="s-employ-grid" style="margin-top:24px">
+      <div class="s-employ-card s-fade">
+        <h4><i class="fa-solid fa-building-columns" style="margin-right:8px;color:var(--accent)"></i>はてなベースの自社案件</h4>
+        <div class="wage">案件に応じて設定</div>
+        <p>はてなベースが受託する記帳代行・経理BPO案件に、メンバーとして直接アサインします。</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>はてなベースのチームとして働ける</li>
+          <li><i class="fa-solid fa-check"></i>freee会計を活用した案件が中心</li>
+          <li><i class="fa-solid fa-check"></i>スキルに応じた案件マッチング</li>
+        </ul>
+      </div>
+      <div class="s-employ-card s-fade s-d1">
+        <h4><i class="fa-solid fa-user-tie" style="margin-right:8px;color:var(--accent)"></i>講師へのキャリアパス</h4>
+        <div class="wage">講師報酬制度あり</div>
+        <p>研修で優秀な成績を収めた方には、次回以降の講師としての登壇もご案内します。</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>受講生 → 講師へのキャリアアップが可能</li>
+          <li><i class="fa-solid fa-check"></i>講師料のお支払い（単発謝金 / 業務委託）</li>
+          <li><i class="fa-solid fa-check"></i>将来的な正社員登用のルートもあり</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="s-employ-partners s-fade">
+      <p style="font-weight:600;color:var(--navy);font-size:15px;margin-bottom:12px">提携先・就労先パートナー</p>
+      <div class="s-employ-partner-logos">
+        <div class="partner">経理BPO大手企業</div>
+        <div class="partner">会計事務所・税理士事務所</div>
+        <div class="partner">はてなベース自社案件</div>
+        <div class="partner">人材紹介会社</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 料金 ===== -->
+<section class="s-section s-pricing">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">Pricing</p>
+      <h2 class="s-title s-fade">料金</h2>
+    </div>
+    <div class="s-pricing-card s-fade">
+      <div class="s-pricing-amount">50,000<small>円（税込）/ 人</small></div>
+      <div class="s-pricing-note">速習freee会計研修（E-learning + 実地研修）</div>
+      <ul class="s-pricing-includes">
+        <li><i class="fa-solid fa-check"></i>E-learning動画コンテンツ（約8時間・全15レッスン）のフルアクセス</li>
+        <li><i class="fa-solid fa-check"></i>バーチャル月次決算プログラム（2日間の実地研修）の受講</li>
+        <li><i class="fa-solid fa-check"></i>freeeデモ環境（本番同等）の利用</li>
+        <li><i class="fa-solid fa-check"></i>Slack専用チャンネルでの質問対応・講師フィードバック</li>
+        <li><i class="fa-solid fa-check"></i>修了テストの受験・修了証の発行</li>
+        <li><i class="fa-solid fa-check"></i>講師によるキャリア相談・就労先のご紹介</li>
+        <li><i class="fa-solid fa-check"></i>研修修了後のはてなベースメンバーとしての就労先マッチング</li>
+      </ul>
+      <a href="https://forms.gle/jZJqmp64uMNd4h7P7" target="_blank" class="s-pricing-btn"><i class="fa-solid fa-paper-plane"></i> 研修に申し込む</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="s-section">
+  <div class="s-container">
+    <div class="s-center">
+      <p class="s-eyebrow s-fade">FAQ</p>
+      <h2 class="s-title s-fade">よくある<span>ご質問</span></h2>
+    </div>
+    <div class="s-faq-list">
+      <div class="s-faq-item s-fade">
+        <div class="s-faq-q">経理未経験でも受講できますか？</div>
+        <div class="s-faq-a">はい、未経験の方でも受講いただけます。E-learningでfreee会計の基本操作から丁寧に学べるカリキュラムになっています。ただし、日商簿記3級程度の基礎知識があるとよりスムーズに進められます。</div>
+      </div>
+      <div class="s-faq-item s-fade s-d1">
+        <div class="s-faq-q">E-learningはいつでも受講できますか？</div>
+        <div class="s-faq-a">はい、オンデマンド形式の動画コンテンツですので、お好きな時間にご自身のペースで進められます。受講期限までに約8時間分のコンテンツを完了していただきます。</div>
+      </div>
+      <div class="s-faq-item s-fade s-d2">
+        <div class="s-faq-q">実地研修はオンラインで参加できますか？</div>
+        <div class="s-faq-a">はい、バーチャル月次決算プログラムはオンラインでの参加が可能です。freeeのデモ環境を使った実技研修のため、ご自宅のPCとインターネット環境があれば受講できます。</div>
+      </div>
+      <div class="s-faq-item s-fade s-d3">
+        <div class="s-faq-q">修了後の就労先は保証されますか？</div>
+        <div class="s-faq-a">就労先の保証はいたしかねますが、研修修了者には複数の提携企業・会計事務所への就労をご紹介します。freee会計のスキルを持つ人材は業界で非常にニーズが高く、多くの修了者が就労先を見つけています。</div>
+      </div>
+      <div class="s-faq-item s-fade s-d4">
+        <div class="s-faq-q">受講に必要なものはありますか？</div>
+        <div class="s-faq-a">ご自身のPC（Windows/Mac）とインターネット環境が必要です。freeeのデモ環境は研修側で用意します。また、研修前にNDA（秘密保持契約）への締結をお願いしています。</div>
+      </div>
+      <div class="s-faq-item s-fade s-d5">
+        <div class="s-faq-q">研修中に使うツールは何ですか？</div>
+        <div class="s-faq-a">freee会計のデモ環境（本番同等の機能）と、コミュニケーションツールとしてSlackを使用します。Slackでは講師への質問や受講者同士の交流が行えます。</div>
+      </div>
+      <div class="s-faq-item s-fade s-d6">
+        <div class="s-faq-q">申し込みから研修開始までの流れを教えてください</div>
+        <div class="s-faq-a">申込フォームからエントリー → NDA（秘密保持契約）の締結 → freeeデモ環境のアカウント発行 → E-learning受講開始 → 実地研修（バーチャル月次決算）という流れです。E-learningは受講期限までにご自身のペースで進めていただきます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="s-cta">
+  <div class="s-container s-center">
+    <h2 class="s-fade">freee会計のスキルを身につけて、<br>新しいキャリアをはじめませんか？</h2>
+    <p class="s-fade">研修修了後は、はてなベースのメンバーとして就労先をご紹介。<br>「学んだら働ける」速習freee会計研修にぜひご参加ください。</p>
+    <a href="https://forms.gle/jZJqmp64uMNd4h7P7" target="_blank" class="s-cta-btn s-fade"><i class="fa-solid fa-paper-plane"></i> 研修に申し込む</a>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="s-footer">
+  <div class="s-container">
+    <div class="s-footer-logo"><img src="images/hatenabase-logo.png" alt="Hatenabase" style="filter:brightness(10)"/></div>
+    <div class="s-footer-copy">&copy; 2026 Hatenabase, inc. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+// Scroll header shadow
+const hdr=document.getElementById('header');
+window.addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',window.scrollY>10)});
+
+// Fade in on scroll
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.s-fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
