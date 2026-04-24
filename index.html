@@ -249,6 +249,15 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
 .s-testimonial p{font-size:14px;color:var(--text);line-height:1.9;padding-left:4px}
 .s-testimonial .s-testimonial-author{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);font-weight:500}
 .s-testimonial .s-testimonial-author .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.s-testimonial-featured{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;align-items:stretch;margin-top:24px}
+.s-testimonial-featured-photo{flex:0 0 260px;overflow:hidden}
+.s-testimonial-featured-photo img{width:100%;height:100%;object-fit:cover}
+.s-testimonial-featured-body{flex:1;padding:32px;display:flex;flex-direction:column;justify-content:center}
+.s-testimonial-featured-body .case-label{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.08em;margin-bottom:8px}
+.s-testimonial-featured-body h4{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.s-testimonial-featured-body .case-meta{font-size:13px;color:var(--muted);margin-bottom:16px}
+.s-testimonial-featured-body blockquote{font-size:14px;color:var(--text);line-height:1.9;border-left:3px solid var(--accent);padding-left:16px;margin:0}
+.s-testimonial-featured-body .case-from{font-size:12px;color:var(--muted);margin-top:16px}
 
 /* ===== Link Card ===== */
 .s-linkcard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -292,6 +301,8 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
   .s-target-grid{grid-template-columns:1fr}
   .s-curriculum-grid{grid-template-columns:1fr}
   .s-testimonial-grid{grid-template-columns:1fr}
+  .s-testimonial-featured{flex-direction:column}
+  .s-testimonial-featured-photo{flex:0 0 auto;height:240px}
   .s-instructor-card{flex-direction:column;align-items:center;text-align:center}
   .s-instructor-info .badges{justify-content:center}
   .s-pricing-amount{font-size:42px}
@@ -622,6 +633,20 @@ body{font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);ba
       <p class="s-eyebrow s-fade">Voices</p>
       <h2 class="s-title s-fade" style="font-size:clamp(20px,3vw,28px)">受講者の<span>声</span></h2>
     </div>
+    <!-- 石井さん事例（写真付き） -->
+    <div class="s-testimonial-featured s-fade">
+      <div class="s-testimonial-featured-photo">
+        <img src="images/ishii-case.png" alt="石井さん"/>
+      </div>
+      <div class="s-testimonial-featured-body">
+        <div class="case-label">導入事例：3ヶ月で実戦の核へ</div>
+        <h4>石井さん（23歳）</h4>
+        <div class="case-meta">はてなベース株式会社 育成事例</div>
+        <blockquote>未経験でしたが、入社初日からfreeeでの記帳代行をスムーズに開始。3ヶ月目には決算補助まで任せられるレベルになりました。教育に取られていた私の時間はほぼゼロになりました。</blockquote>
+        <div class="case-from">― 会計事業部 部長</div>
+      </div>
+    </div>
+
     <div class="s-testimonial-grid">
       <div class="s-testimonial s-fade">
         <p>E-learningの内容がとても実践的で、実際のfreee画面を操作しながら学べるので理解が早かったです。特に「自動で経理」や「自動登録ルール」の部分は、実務で毎日使う機能なので、研修で一通り触れたことで自信を持って業務に入れました。Slackでいつでも講師に質問できる環境もありがたかったです。</p>
