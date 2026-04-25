@@ -92,14 +92,14 @@
   .nav-links{ display:flex; gap:28px; align-items:center; }
   .nav-links a{ font-size:13px; text-decoration:none; color:var(--ink); }
   .nav-links a:hover{ color:var(--freee); }
-  .nav-cta{
+  .nav-links a.nav-cta{
     font-size:13px; padding:10px 20px;
-    background:var(--ink); color:var(--white);
+    background:var(--ink); color:var(--white) !important;
     border-radius:999px; border:3px solid var(--ink);
     box-shadow: 3px 4px 0 var(--freee);
     font-weight:900;
   }
-  .nav-cta:hover{ color:var(--white) !important; background:var(--freee); }
+  .nav-links a.nav-cta:hover{ color:var(--white) !important; background:var(--freee); }
   @media(max-width:720px){ .nav-links a:not(.nav-cta){ display:none; } }
 
   /* ========================= HERO ========================= */
@@ -1025,7 +1025,7 @@
   <div class="wrap">
     <div class="sec-head fade">
       <div class="sec-number">§ 01 / PROGRAM</div>
-      <h2 class="sec-title">座学で終わらせない。<br /><em>実際の月次</em>を、通す。</h2>
+      <h2 class="sec-title">座学で終わらせない。<br /><em>月次決算</em>を、回せるようになる。</h2>
       <p class="sec-lead">
         freee会計の操作に慣れるだけでは、現場では足りません。本研修は、取引入力から月次決算まで「ひと月を一気通貫で回す」ことを前提に設計しました。仕訳の判断に迷う場面、税理士への引き継ぎ、freeeの自動化が効かない例外処理 — 現場で必ず起こる論点を、デモ環境で先に体験します。
       </p>
@@ -1223,9 +1223,9 @@
   <div class="wrap">
     <div class="sec-head fade">
       <div class="sec-number">§ 04 / INSTRUCTORS</div>
-      <h2 class="sec-title">監査法人と税理士事務所、<br /><em>両方の目</em>で教える。</h2>
+      <h2 class="sec-title"><em>会計ソフトに精通した</em><br />専門家がサポート。</h2>
       <p class="sec-lead">
-        大手監査法人で「見られる側」を経験した代表と、約80社の顧問先を抱え現場を毎日見ている税理士。机上の会計理論ではなく、freeeを使った実務で本当に起きる判断を、二人の視点から講義します。
+        freeeの導入・運用支援で多数の実績を持つ専門家が直接講義。机上の会計理論ではなく、freeeを使った実務で本当に起きる判断を、現場目線から伝えます。
       </p>
     </div>
 
@@ -1233,8 +1233,8 @@
       <div class="ins-card fade">
         <img src="images/seto-profile.jpg" alt="世戸口 逸人" />
         <div class="ins-name">世戸口 逸人</div>
-        <div class="ins-role">FOUNDER / CPA</div>
-        <div class="ins-career">公認会計士。PwC Japan 有限責任監査法人を経て、はてなベース株式会社を創業。</div>
+        <div class="ins-role">はてなベース株式会社 代表取締役 / 公認会計士試験合格者</div>
+        <div class="ins-career">PwC Japan 有限責任監査法人を経て、はてなベース株式会社を創業。</div>
         <div class="ins-bio">監査法人時代に見た「会計のブラックボックス化」への課題意識が、freeeをはじめとしたクラウド会計の普及支援と、人材育成プログラムの原点。上場企業から創業期まで、会計基盤の設計を手がける。</div>
         <div class="ins-qual">
           <ul>
@@ -1645,8 +1645,7 @@
       </div>
     </div>
     <div class="foot-links">
-      <a href="https://hatenabase.co.jp" target="_blank">会社概要</a>
-      <a href="https://seto0615.github.io/hatenabase-tax-lp/" target="_blank">はてなベース税理士事務所</a>
+      <a href="https://hatenabase.jp" target="_blank">会社概要</a>
     </div>
   </div>
 </footer>
