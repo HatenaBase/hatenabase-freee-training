@@ -819,6 +819,36 @@
     border-radius:50%; font-size:10px;
   }
 
+  /* ========================= GUARANTEE ========================= */
+  .guarantee-sec{ background:var(--white); }
+  .guarantee-box{
+    max-width:780px; margin:0 auto;
+    background:var(--white);
+    border:3px solid var(--ink); border-radius:24px;
+    padding:48px 44px;
+    box-shadow: 6px 6px 0 var(--ink);
+    display:flex; gap:36px; align-items:center;
+  }
+  @media(max-width:640px){ .guarantee-box{ flex-direction:column; text-align:center; padding:36px 24px; gap:24px; } }
+  .guarantee-icon{
+    flex-shrink:0; width:88px; height:88px;
+    background:var(--accent); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:40px; border:3px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .guarantee-body h3{
+    font-family:"M PLUS Rounded 1c"; font-weight:900;
+    font-size:22px; margin-bottom:12px; color:var(--ink);
+  }
+  .guarantee-body p{
+    font-size:14px; line-height:2; color:var(--ink-soft); margin-bottom:12px;
+  }
+  .guarantee-note{
+    font-size:12px; color:var(--ink-soft); opacity:.7;
+    border-top:1px dashed rgba(10,21,48,.2); padding-top:12px; margin-top:4px;
+  }
+
   /* ========================= FAQ ========================= */
   .faq-list{ max-width:900px; margin:0 auto; }
   details.faq{
@@ -1582,6 +1612,23 @@
           <li>就労マッチング面談</li>
           <li>就労後6ヶ月間のSlackサポート</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= GUARANTEE ========================= -->
+<section class="block guarantee-sec">
+  <div class="wrap">
+    <div class="guarantee-box fade">
+      <div class="guarantee-icon">&#x1F6E1;</div>
+      <div class="guarantee-body">
+        <h3>全額返金保証</h3>
+        <p>
+          E-learning全15レッスンと2日間の実地研修をすべて修了された方には、就労・派遣先のご案内をいたします。<br />
+          万が一、研修内容にご満足いただけなかった場合は、受講料を全額返金いたします。
+        </p>
+        <div class="guarantee-note">※ 返金をご希望の場合は、研修修了後14日以内にお申し出ください。</div>
       </div>
     </div>
   </div>
