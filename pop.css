@@ -626,6 +626,181 @@
   .voice-profile{ font-size:12px; font-weight:700; color:var(--ink-soft); }
   .voice-body{ font-size:13px; line-height:2; color:var(--ink-soft); }
 
+  /* ========================= CASE DETAIL (Before/After) ========================= */
+  .case-detail{
+    background:var(--white);
+    border:3px solid var(--ink);
+    border-radius:24px;
+    padding:40px 36px;
+    box-shadow: 8px 8px 0 var(--ink);
+    margin-bottom:40px;
+  }
+  .case-detail-header{
+    display:flex; gap:16px; align-items:center;
+    margin-bottom:24px;
+    padding-bottom:18px;
+    border-bottom:2px solid var(--ink);
+  }
+  .case-detail-avatar{ flex-shrink:0; }
+  .case-detail-name{
+    font-family:"M PLUS Rounded 1c"; font-weight:900;
+    font-size:20px; margin-bottom:4px;
+  }
+  .case-detail-tag{
+    font-family:"JetBrains Mono", monospace; font-weight:700;
+    font-size:11px; letter-spacing:.08em; color:var(--freee);
+  }
+  .case-detail-ttl{
+    font-family:"M PLUS Rounded 1c"; font-weight:900;
+    font-size:22px; line-height:1.5; margin-bottom:16px;
+  }
+  .case-detail-body{
+    font-size:14px; line-height:2; color:var(--ink-soft);
+    margin-bottom:32px;
+  }
+
+  /* Before → After メトリクス */
+  .ba-metrics{ margin-bottom:32px; }
+  .ba-metric{
+    background:var(--paper-2);
+    border:3px solid var(--ink);
+    border-radius:20px;
+    padding:28px 32px;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .ba-metric-label{
+    font-family:"JetBrains Mono", monospace; font-weight:700;
+    font-size:11px; letter-spacing:.14em; color:var(--muted);
+    margin-bottom:16px; text-align:center;
+  }
+  .ba-metric-row{
+    display:flex; align-items:center; justify-content:center;
+    gap:24px; flex-wrap:wrap;
+  }
+  .ba-before, .ba-after{
+    text-align:center; min-width:140px;
+    padding:20px 24px;
+    border-radius:16px;
+    border:3px solid var(--ink);
+  }
+  .ba-before{
+    background:var(--white);
+  }
+  .ba-after{
+    background:linear-gradient(135deg, var(--accent) 0%, #ffe87a 100%);
+  }
+  .ba-tag{
+    display:inline-block; font-weight:900; font-size:11px;
+    padding:3px 12px; border-radius:999px; margin-bottom:8px;
+    font-family:"JetBrains Mono", monospace; letter-spacing:.06em;
+  }
+  .ba-tag.before{ background:var(--ink); color:var(--white); }
+  .ba-tag.after{ background:var(--freee); color:var(--white); }
+  .ba-value{
+    font-family:"M PLUS Rounded 1c"; font-weight:900;
+    font-size:36px; line-height:1.2; color:var(--ink);
+  }
+  .ba-value small{
+    font-size:16px; font-weight:900;
+  }
+  .ba-note{
+    font-size:12px; color:var(--ink-soft); margin-top:6px;
+    font-weight:700;
+  }
+  .ba-arrow{
+    font-size:32px; font-weight:900; color:var(--freee);
+    flex-shrink:0;
+  }
+  .ba-uplabel{
+    text-align:center; margin-top:16px;
+    font-family:"M PLUS Rounded 1c"; font-weight:900;
+    font-size:16px; color:var(--freee-deep);
+    padding:6px 18px;
+    background:var(--white);
+    border:2px solid var(--freee);
+    border-radius:999px;
+    display:inline-block;
+    width:100%; max-width:260px;
+    margin-left:auto; margin-right:auto;
+    display:block; margin-left:auto; margin-right:auto;
+  }
+
+  /* ○× スキル比較表 */
+  .ba-table-wrap{
+    margin-bottom:28px;
+  }
+  .ba-table-title{
+    font-family:"M PLUS Rounded 1c"; font-weight:900;
+    font-size:16px; margin-bottom:14px;
+    padding-left:4px;
+  }
+  .ba-table{
+    width:100%; border-collapse:separate; border-spacing:0;
+    border:3px solid var(--ink); border-radius:16px;
+    overflow:hidden;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .ba-table thead th{
+    background:var(--ink); color:var(--white);
+    padding:12px 16px;
+    font-family:"JetBrains Mono", monospace; font-weight:700;
+    font-size:12px; letter-spacing:.06em;
+    text-align:center;
+  }
+  .ba-table thead th:first-child{
+    text-align:left; width:auto;
+  }
+  .ba-table thead th:nth-child(2),
+  .ba-table thead th:nth-child(3){
+    width:90px;
+  }
+  .ba-table tbody td{
+    padding:12px 16px;
+    font-size:13px; font-weight:700;
+    border-bottom:1px solid var(--paper-2);
+    background:var(--white);
+  }
+  .ba-table tbody tr:last-child td{ border-bottom:none; }
+  .ba-table tbody td:nth-child(2),
+  .ba-table tbody td:nth-child(3){
+    text-align:center; font-size:18px; font-weight:900;
+  }
+  .ba-table tbody td.ok{
+    color:var(--freee); background:rgba(53,103,245,.06);
+  }
+  .ba-table tbody td.ng{
+    color:#ccc;
+  }
+  .ba-table tbody td.partial{
+    color:var(--pink);
+  }
+  @media(max-width:520px){
+    .ba-table thead th,
+    .ba-table tbody td{ padding:10px 10px; font-size:12px; }
+    .ba-table thead th:nth-child(2),
+    .ba-table thead th:nth-child(3){ width:60px; }
+  }
+
+  /* case-detail の result（まとめ） */
+  .case-detail-result{
+    padding:18px 22px;
+    background:rgba(53,103,245,.06);
+    border-left:4px solid var(--freee);
+    border-radius:8px;
+    font-size:13px; line-height:2;
+  }
+  .case-detail-result .ba-tag{
+    margin-bottom:0; margin-right:6px; vertical-align:middle;
+  }
+
+  @media(max-width:640px){
+    .case-detail{ padding:28px 20px; }
+    .ba-metric{ padding:20px 16px; }
+    .ba-value{ font-size:28px; }
+    .ba-before, .ba-after{ min-width:110px; padding:14px 16px; }
+    .ba-arrow{ font-size:24px; }
+  }
+
   /* ========================= FLOW ========================= */
   .flow-sec{
     background:var(--freee); color:var(--white);
