@@ -413,6 +413,134 @@
   .income-arrow-svg { margin: 0 auto; transform: rotate(90deg); }
 }
 
+/* ---- SEMINAR 告知セクション ---- */
+.seminar-sec {
+  background: linear-gradient(135deg, #FFF8E8 0%, #FFF2D4 100%);
+  border-top: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
+  padding: 48px 0;
+  position: relative;
+  overflow: hidden;
+}
+.seminar-sec::before {
+  content: "";
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  background: rgba(255,214,61,.25);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.seminar-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  flex-wrap: wrap;
+}
+.seminar-badge {
+  flex-shrink: 0;
+  background: var(--freee);
+  color: #fff;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .12em;
+  padding: 6px 18px;
+  border-radius: 99px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.seminar-date-block {
+  flex-shrink: 0;
+  text-align: center;
+  background: var(--freee);
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px 32px;
+  box-shadow: 4px 4px 0 var(--freee-deep);
+  min-width: 160px;
+}
+.seminar-date-num {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1;
+  color: var(--accent);
+}
+.seminar-date-day {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,.85);
+  margin-top: 4px;
+}
+.seminar-date-time {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 6px;
+}
+.seminar-body {
+  flex: 1;
+  min-width: 240px;
+}
+.seminar-title {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 900;
+  font-size: clamp(17px, 2.8vw, 22px);
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+.seminar-title em { font-style: normal; color: var(--freee); }
+.seminar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.seminar-chip {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: rgba(53,103,245,.08);
+  color: var(--freee);
+  letter-spacing: .03em;
+}
+.seminar-chip.free {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.seminar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: #fff;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 rgba(10,21,48,.3);
+  transition: transform .2s, box-shadow .2s;
+}
+.seminar-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0 rgba(10,21,48,.3);
+}
+.seminar-cta svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 3; fill: none; }
+@media(max-width:640px) {
+  .seminar-inner { flex-direction: column; gap: 24px; text-align: center; }
+  .seminar-date-block { width: 100%; }
+  .seminar-meta { justify-content: center; }
+}
+
 /* ---- REMOTE STATS ---- */
 .remote-strip {
   background: var(--freee);
@@ -736,6 +864,31 @@
 <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0,30 C180,60 360,0 540,20 C720,40 900,60 1080,30 C1260,0 1380,40 1440,30 L1440,60 L0,60 Z" fill="#FAF5EE"/>
 </svg>
+</section>
+
+<!-- ========================= SEMINAR 告知 ========================= -->
+<section class="seminar-sec">
+<div class="seminar-inner">
+  <div class="seminar-date-block">
+    <div class="seminar-date-num">5/27</div>
+    <div class="seminar-date-day">火曜日</div>
+    <div class="seminar-date-time">14:00 〜 15:00</div>
+  </div>
+  <div class="seminar-body">
+    <div class="seminar-badge">無料オンライン説明会</div>
+    <div class="seminar-title">速習 freee 会計研修<br><em>無料説明会</em>を開催します</div>
+    <div class="seminar-meta">
+      <span class="seminar-chip free">参加無料</span>
+      <span class="seminar-chip">Zoom 開催</span>
+      <span class="seminar-chip">定員 20名</span>
+      <span class="seminar-chip">5月27日（火）14:00〜</span>
+    </div>
+    <a href="https://forms.gle/jZJqmp64uMNd4h7P7" target="_blank" class="seminar-cta">
+      説明会に申し込む（無料）
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</div>
 </section>
 
 <!-- ========================= NEW: PAIN POINT ========================= -->
