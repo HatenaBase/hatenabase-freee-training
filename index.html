@@ -286,6 +286,21 @@ footer a:hover{color:#e58866}
 .ptable tr:last-child td{border-bottom:none}
 .ptable .est{text-align:center;font-family:"JetBrains Mono",monospace;font-weight:700;color:var(--accent)}
 
+/* SEMINAR BANNER */
+.seminar-banner{background:var(--ink);color:var(--paper);border-top:1px solid rgba(245,241,235,.15)}
+.seminar-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:40px 0;flex-wrap:wrap}
+.seminar-info{display:flex;flex-direction:column;gap:8px}
+.seminar-badge{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.18em;color:#e58866;text-transform:uppercase}
+.seminar-title-text{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:clamp(20px,2.8vw,28px);line-height:1.35;color:var(--paper)}
+.seminar-title-text em{font-style:normal;color:#e58866}
+.seminar-details{display:flex;gap:20px;flex-wrap:wrap;margin-top:4px}
+.seminar-chip{font-size:13px;color:rgba(245,241,235,.7);display:flex;align-items:center;gap:6px}
+.seminar-chip::before{content:"";width:6px;height:6px;background:#e58866;border-radius:50%;flex-shrink:0}
+.seminar-cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;background:#e58866;color:var(--paper);text-decoration:none;font-size:15px;font-weight:700;letter-spacing:.04em;transition:background .2s;white-space:nowrap}
+.seminar-cta-btn:hover{background:var(--accent)}
+.seminar-cta-btn svg{width:16px;height:16px}
+@media(max-width:720px){.seminar-inner{flex-direction:column;align-items:flex-start;gap:24px}}
+
 /* FADE */
 .fade{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .fade.visible{opacity:1;transform:none}
@@ -344,6 +359,28 @@ footer a:hover{color:#e58866}
         <div class="sep"></div>
         <img src="images/digitalbase-logo.png" alt="DIGITAL BASE" style="height:36px"/>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEMINAR BANNER -->
+<section class="seminar-banner">
+  <div class="wrap">
+    <div class="seminar-inner">
+      <div class="seminar-info">
+        <div class="seminar-badge">無料オンライン説明会</div>
+        <div class="seminar-title-text">速習 freee 会計研修 <em>無料説明会</em>を開催します</div>
+        <div class="seminar-details">
+          <span class="seminar-chip">オンライン開催</span>
+          <span class="seminar-chip">【生配信】7/29（水）19:30〜20:30</span>
+          <span class="seminar-chip">【アーカイブ】8/4（火）11:00〜 / 8/7（金）20:00〜</span>
+          <span class="seminar-chip">参加費 無料</span>
+        </div>
+      </div>
+      <a href="https://hatenabase-freee-trainning08.peatix.com/view" target="_blank" class="seminar-cta-btn">
+        説明会に申し込む（無料）
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
